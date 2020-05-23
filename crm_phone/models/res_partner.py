@@ -17,9 +17,11 @@ class ResPartner(models.Model):
 
     @api.depends('phonecall_ids')
     def _compute_phonecall_count(self):
-        rg_res = self.env['crm.phonecall'].read_group(
-            [('partner_id', 'in', self.ids)],
-            ['partner_id'], ['partner_id'])
-        for rg_re in rg_res:
-            partner = self.browse(rg_re['partner_id'][0])
-            partner.phonecall_count = rg_re['partner_id_count']
+        # rg_res = self.env['crm.phonecall'].read_group(
+        #     [('partner_id', 'in', self.ids)],
+        #     ['partner_id'], ['partner_id'])
+        # for rg_re in rg_res:
+        #     partner = self.browse(rg_re['partner_id'][0])
+        #     partner.phonecall_count = rg_re['partner_id_count']
+        for record in self:
+            record.phonecall_count = len(record.phonecall_ids)

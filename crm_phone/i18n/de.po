@@ -47,7 +47,7 @@ msgid "Calls"
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__state__cancel
 msgid "Cancelled"
 msgstr ""
 
@@ -163,13 +163,13 @@ msgid "Group By"
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__state__done
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "Held"
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,priority:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__priority__2
 msgid "High"
 msgstr ""
 
@@ -195,7 +195,7 @@ msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,direction:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__direction__inbound
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "Inbound"
 msgstr ""
@@ -246,7 +246,7 @@ msgid "Logged Calls"
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,priority:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__priority__0
 msgid "Low"
 msgstr ""
 
@@ -293,7 +293,7 @@ msgid "No"
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,priority:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__priority__1
 msgid "Normal"
 msgstr ""
 
@@ -337,7 +337,7 @@ msgid "Number of unread messages"
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,direction:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__direction__outbound
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "Outbound"
 msgstr ""
@@ -458,7 +458,7 @@ msgid ""
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__state__open
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "To Do"
 msgstr ""

@@ -123,12 +123,12 @@ msgid "Display Name"
 msgstr ""
 
 #. module: base_phone
-#: selection:reformat.all.phonenumbers,state:0
+#: model:ir.model.fields.selection,name:base_phone.selection__reformat_all_phonenumbers__state__done
 msgid "Done"
 msgstr ""
 
 #. module: base_phone
-#: selection:reformat.all.phonenumbers,state:0
+#: model:ir.model.fields.selection,name:base_phone.selection__reformat_all_phonenumbers__state__draft
 msgid "Draft"
 msgstr ""
 
@@ -143,7 +143,7 @@ msgid "E.164 equivalent of the calling number."
 msgstr ""
 
 #. module: base_phone
-#: selection:number.not.found,number_type:0
+#: model:ir.model.fields.selection,name:base_phone.selection__number_not_found__number_type__phone
 msgid "Fixed"
 msgstr ""
 
@@ -198,7 +198,7 @@ msgid "Missing country on company %s"
 msgstr ""
 
 #. module: base_phone
-#: selection:number.not.found,number_type:0
+#: model:ir.model.fields.selection,name:base_phone.selection__number_not_found__number_type__mobile
 msgid "Mobile"
 msgstr ""
 

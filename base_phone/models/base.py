@@ -9,7 +9,6 @@ from odoo import models, api
 class Base(models.AbstractModel):
     _inherit = 'base'
 
-    @api.multi
     def write(self, vals):
         fields_to_convert = common.get_phone_fields(self, vals)
         if fields_to_convert:

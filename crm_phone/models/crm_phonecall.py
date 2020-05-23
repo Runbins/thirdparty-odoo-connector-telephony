@@ -8,6 +8,7 @@ from odoo import api, fields, models
 
 class CrmPhonecall(models.Model):
     _name = 'crm.phonecall'
+    _description = "CRM phone call"
     _inherit = ['mail.thread', 'phone.validation.mixin']
     _order = "id desc"
 
@@ -21,8 +22,7 @@ class CrmPhonecall(models.Model):
     description = fields.Text(string='Description', copy=False)
     company_id = fields.Many2one(
         'res.company', string='Company',
-        default=lambda self: self.env['res.company']._company_default_get(
-            'crm.phonecall'))
+        default=lambda self: self.env.company)
     user_id = fields.Many2one(
         'res.users', string='Responsible', track_visibility='onchange',
         default=lambda self: self.env.user)

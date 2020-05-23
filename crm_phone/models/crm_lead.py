@@ -39,9 +39,11 @@ class CrmLead(models.Model):
 
     @api.depends('phonecall_ids')
     def _compute_phonecall_count(self):
-        rg_res = self.env['crm.phonecall'].read_group(
-            [('opportunity_id', 'in', self.ids)],
-            ['opportunity_id'], ['opportunity_id'])
-        for rg_re in rg_res:
-            lead = self.browse(rg_re['opportunity_id'][0])
-            lead.phonecall_count = rg_re['opportunity_id_count']
+        # rg_res = self.env['crm.phonecall'].read_group(
+        #     [('opportunity_id', 'in', self.ids)],
+        #     ['opportunity_id'], ['opportunity_id'])
+        # for rg_re in rg_res:
+        #     lead = self.browse(rg_re['opportunity_id'][0])
+        #     lead.phonecall_count = rg_re['opportunity_id_count']
+        for record in self:
+            record.phonecall_count = len(record.phonecall_ids)

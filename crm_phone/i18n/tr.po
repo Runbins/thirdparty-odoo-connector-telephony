@@ -48,7 +48,7 @@ msgid "Calls"
 msgstr "Çağrılar"
 
 #. module: crm_phone
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__state__cancel
 msgid "Cancelled"
 msgstr "İptalEdilen"
 
@@ -165,13 +165,13 @@ msgid "Group By"
 msgstr "Grupla"
 
 #. module: crm_phone
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__state__done
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "Held"
 msgstr "Bekletilen"
 
 #. module: crm_phone
-#: selection:crm.phonecall,priority:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__priority__2
 msgid "High"
 msgstr "Yüksek"
 
@@ -197,7 +197,7 @@ msgid "If checked, some messages have a delivery error."
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,direction:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__direction__inbound
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "Inbound"
 msgstr "Gelen"
@@ -249,7 +249,7 @@ msgid "Logged Calls"
 msgstr "Günlük Çağrılar"
 
 #. module: crm_phone
-#: selection:crm.phonecall,priority:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__priority__0
 msgid "Low"
 msgstr "Düşük"
 
@@ -296,7 +296,7 @@ msgid "No"
 msgstr "Yok"
 
 #. module: crm_phone
-#: selection:crm.phonecall,priority:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__priority__1
 msgid "Normal"
 msgstr "Normal"
 
@@ -341,7 +341,7 @@ msgid "Number of unread messages"
 msgstr "Telefon Görüşme Sayıları"
 
 #. module: crm_phone
-#: selection:crm.phonecall,direction:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__direction__outbound
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "Outbound"
 msgstr "Giden"
@@ -463,7 +463,7 @@ msgid ""
 msgstr ""
 
 #. module: crm_phone
-#: selection:crm.phonecall,state:0
+#: model:ir.model.fields.selection,name:crm_phone.selection__crm_phonecall__state__open
 #: model_terms:ir.ui.view,arch_db:crm_phone.crm_phonecall_search
 msgid "To Do"
 msgstr "Yapılacak"
