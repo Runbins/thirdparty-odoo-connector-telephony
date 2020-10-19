@@ -5,7 +5,7 @@
 
 {
     'name': 'CRM Phone',
-    'version': '13.0.1.0.0',
+    'version': '14.0.1.0.0',
     'category': 'Phone',
     'license': 'AGPL-3',
     'summary': 'Validate phone numbers in CRM',

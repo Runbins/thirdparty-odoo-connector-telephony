@@ -14,7 +14,7 @@
     <field name="arch" type="xml">
         <form string="CRM Phone Call">
             <group name="main">
-                <label string="Create a phone call in the CRM ?" for="id"/>
+                <h3 string="Create a phone call in the CRM ?" />
             </group>
             <footer>
                 <button name="button_create_outgoing_phonecall" string="Yes" type="object" class="btn-primary"/>
