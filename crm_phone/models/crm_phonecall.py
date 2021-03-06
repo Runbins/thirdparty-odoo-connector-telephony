@@ -15,19 +15,19 @@ class CrmPhonecall(models.Model):
     # Restore the object that existed in v8
     # and doesn't exist in v9 community any more
     name = fields.Char(
-        string='Call Summary', required=True, track_visibility='onchange')
+        string='Call Summary', required=True, tracking=1)
     date = fields.Datetime(
-        string='Date', track_visibility='onchange', copy=False,
+        string='Date', tracking=2, copy=False,
         default=lambda self: fields.Datetime.now())
     description = fields.Text(string='Description', copy=False)
     company_id = fields.Many2one(
         'res.company', string='Company',
         default=lambda self: self.env.company)
     user_id = fields.Many2one(
-        'res.users', string='Responsible', track_visibility='onchange',
+        'res.users', string='Responsible', tracking=3,
         default=lambda self: self.env.user)
     team_id = fields.Many2one(
-        'crm.team', string='Sales Team', track_visibility='onchange',
+        'crm.team', string='Sales Team', tracking=4,
         default=lambda self: self.env['crm.team'].sudo()._get_default_team_id(
             user_id=self.env.uid))
     partner_id = fields.Many2one(
@@ -38,16 +38,16 @@ class CrmPhonecall(models.Model):
         ('0', 'Low'),
         ('1', 'Normal'),
         ('2', 'High')
-        ], string='Priority', track_visibility='onchange', default='1')
+        ], string='Priority', tracking=5, default='1')
     opportunity_id = fields.Many2one(
         'crm.lead', string='Lead/Opportunity',
-        ondelete='cascade', track_visibility='onchange')
+        ondelete='cascade', tracking=6)
     state = fields.Selection([
         ('open', 'To Do'),
         ('done', 'Held'),
         ('cancel', 'Cancelled'),
         ], string='Status', default='open', copy=False, required=True,
-        track_visibility='onchange',
+        tracking=7,
         help='The status is set to Confirmed, when a case is created.\n'
         'When the call is over, the status is set to Held.\n'
         'If the call is not applicable anymore, the status can be set to '
